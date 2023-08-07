@@ -6,10 +6,12 @@ import git from "../assets/images/git.png";
 import ts from "../assets/images/ts.png";
 import tailwind from "../assets/images/tailwind.png";
 import firebase from "../assets/images/firebase.png";
+import coder from "../assets/images/coder.jpg";
 import nodejs from "../assets/images/nodejs.png";
 import python from "../assets/images/python.png";
 import mongo from "../assets/images/mongo.png";
 import aws from "../assets/images/aws.png";
+import logo from "../assets/images/logo.png";
 import cv from "../assets/idocv.pdf";
 import hevanti from "../assets/images/hevanti.jpg";
 import advancedStudies from "../assets/images/advansed-studies.png";
@@ -36,36 +38,7 @@ function Home() {
     );
   };
 
-  // const handleDownload = () => {
-  //   const link = document.createElement('a');
-  //   link.download = 'idoCV.pdf'; // Replace with your desired filename and extension
-  //   link.href = '"https://firebasestorage.googleapis.com/v0/b/micro-blogging-464f6.appspot.com/o/Ido%20Lotan%20CV%20-%2010.7.23.pdf?alt=media&token=4d2e9cf2-7300-463a-97c5-fda8a1394da0"'; // Replace with the URL of the file you want to download
-  //   link.click();
-  // };
-
-  // const handleDownload = () => {
-  //   const link = document.createElement('a');
-  //   link.href = "../assets/images/idoCV.pdf" // Replace with the actual path to your PDF file
-  //   link.setAttribute('download', 'filename.pdf'); // Replace with your desired filename for the downloaded PDF
-
-  //   // Trigger the click event to start the download
-  //   link.click();
-  // };
-
-  // const handleDownload = () => {
-  //   const link = document.createElement('a');
-  //   link.href = '../assets/images/idoCV.pdf'; // Replace with the actual path to your PDF file
-  //   link.setAttribute('download', 'filename.pdf'); // Replace with your desired filename for the downloaded PDF
-
-  //   // Append the link to the document body
-  //   document.body.appendChild(link);
-
-  //   // Programmatically click the link
-  //   link.click();
-
-  //   // Clean up by removing the link from the document body
-  //   document.body.removeChild(link);
-  // };
+ 
 
   const handleDownload = () => {
     const fileName = "idoCV.pdf"; // Specify the desired file name
@@ -80,12 +53,11 @@ function Home() {
   return (
     <div>
       <div>
-        <nav className="  bg-white">
+        <nav className="  bg-[#51a79a]">
           <div className="max-w-screen-xxl mx-auto flex flex-wrap items-center justify-between px-4 py-2.5 md:px-6">
             <a href="/" className="step-1 flex items-center max-sm:mb-3">
-              <span className="self-center whitespace-nowrap text-xl font-semibold text-white ">
-                Ido
-              </span>
+            
+              <img src={logo} alt="" className="h-10" />
             </a>
             <div className="flex items-center pt-2 max-sm:w-full">
               <ul className="nav-step-3 mr-6 mt-0   flex flex-row   flex-wrap font-medium">
@@ -127,13 +99,13 @@ function Home() {
         <div class=" border-bl-200 border-tr-200 grid-cols-auto h-143 transform-will-change relative col-span-2 w-full flex-none justify-self-start overflow-hidden bg-green-500"></div>
       </div>
 
-      <section className="flex justify-center  bg-white" id="home">
+      <section className="flex justify-center items-start  bg-[#51a79a] " id="home">
         <div className=" p-[5vw]">
           <div className="max-md:w-full">
             <div className="flex flex-col  justify-between md:flex-row">
               <div className="mt-11 flex flex-col  ">
                 <div className="flex flex-col items-center justify-center  md:items-start">
-                  <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-4xl text-[64px] font-bold leading-none tracking-tight  text-[#22577a] ">
+                  <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-4xl text-[64px] font-bold leading-none tracking-tight  text-black ">
                     <div className="flex">
                       <span class="chevron-left">&lt;</span>
                       <h1>coder</h1>
@@ -152,7 +124,7 @@ function Home() {
                   <div className="m-1 mt-5 flex">
                     <div
                       onClick={handleDownload}
-                      className=" inline-flex cursor-pointer items-center rounded-full   bg-[#57cc99]  px-5 py-3 text-center text-base font-medium text-white hover:bg-black focus:ring-4 focus:ring-green-600 "
+                      className=" inline-flex cursor-pointer items-center rounded-full   bg-[#295a52]  px-5 py-3 text-center text-base font-medium text-white hover:bg-black focus:ring-4 focus:ring-green-600 "
                     >
                       Get CV
                     </div>
@@ -160,14 +132,14 @@ function Home() {
                   <div className="m-1 mt-5 flex">
                     <a
                       href="#contact"
-                      className="inline-flex items-center  rounded-full bg-[#57cc99]  px-5 py-3 text-center text-base font-medium text-white hover:bg-black focus:ring-4 focus:ring-green-900 "
+                      className="inline-flex items-center  rounded-full bg-[#295a52]  px-5 py-3 text-center text-base font-medium text-white hover:bg-black focus:ring-4 focus:ring-green-900 "
                     >
                       Contact me
                     </a>
                   </div>
                 </div>
               </div>
-              <img src={HeroPicture} alt="" className="h-96" />
+              <img src={coder} alt="" className="h-96 rounded-full" />
             </div>
           </div>
           <div className="w-1/2 max-md:w-full  "></div>
@@ -271,7 +243,7 @@ function Home() {
                   </div>
 
                   <div className="group">
-                    <Link to="https://advanced-studies-a.netlify.app/">
+                    <Link to="https://advanced-studies-client.vercel.app/">
                       <img
                         src={advancedStudies}
                         alt=""
