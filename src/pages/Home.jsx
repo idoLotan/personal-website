@@ -12,6 +12,8 @@ import python from "../assets/images/python.png";
 import mongo from "../assets/images/mongo.png";
 import aws from "../assets/images/aws.png";
 import logo from "../assets/images/logo.png";
+import matrix from "../assets/images/matrix.png";
+
 import cv from "../assets/idocv.pdf";
 import hevanti from "../assets/images/hevanti.jpg";
 import advancedStudies from "../assets/images/advansed-studies.png";
@@ -38,8 +40,6 @@ function Home() {
     );
   };
 
- 
-
   const handleDownload = () => {
     const fileName = "idoCV.pdf"; // Specify the desired file name
     const filePath = "/static/media/idocv.3411d03ce24c6b145664.pdf"; // Specify the path to your local PDF file
@@ -56,7 +56,6 @@ function Home() {
         <nav className="  bg-[#51a79a]">
           <div className="max-w-screen-xxl mx-auto flex flex-wrap items-center justify-between px-4 py-2.5 md:px-6">
             <a href="/" className="step-1 flex items-center max-sm:mb-3">
-            
               <img src={logo} alt="" className="h-10" />
             </a>
             <div className="flex items-center pt-2 max-sm:w-full">
@@ -99,7 +98,10 @@ function Home() {
         <div class=" border-bl-200 border-tr-200 grid-cols-auto h-143 transform-will-change relative col-span-2 w-full flex-none justify-self-start overflow-hidden bg-green-500"></div>
       </div>
 
-      <section className="flex justify-center items-start  bg-[#51a79a] " id="home">
+      <section
+        className="flex items-start justify-center  bg-[#51a79a] "
+        id="home"
+      >
         <div className=" p-[5vw]">
           <div className="max-md:w-full">
             <div className="flex flex-col  justify-between md:flex-row">
@@ -145,8 +147,8 @@ function Home() {
           <div className="w-1/2 max-md:w-full  "></div>
         </div>
       </section>
-      <section className="" id="about">
-        <div className="flex flex-col items-center justify-center bg-black p-10 ">
+      <section className="relative  z-10" id="about">
+        <div className="z-10 flex flex-col items-center justify-center bg-black p-10 ">
           <img
             src={profilePic}
             alt=""
@@ -173,9 +175,10 @@ function Home() {
                 Israel Tech Challenge bootcamp to upgrade my skills
               </p>
               <p class="font-roboto pt-12 text-start text-xl font-normal text-[#C7F9CC]">
-              i started to work as a freelancer on Fievrr in order to get a
-                 Real experience in web development and working with clients.
-                 thanks to Fievrr I got to work on a cool project with designers and managers
+                i started to work as a freelancer on Fievrr in order to get a
+                Real experience in web development and working with clients.
+                thanks to Fievrr I got to work on a cool project with designers
+                and managers
               </p>
               <p class="font-roboto pt-12 text-start text-xl font-normal text-[#C7F9CC]">
                 I am seeking my first professional position as a Full-Stack
@@ -272,6 +275,25 @@ function Home() {
                     <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
                       A site for a cleint how has a education buisness
                     </div>
+                  </div>
+                </div>
+
+                <div className=" order-2 md:order-1 ">
+                  <div className="flex w-[100%]  md:h-[50rem] md:w-[100rem] flex-col md:flex-row items-center">
+                    <div className="">
+                      <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
+                        Hevanti presentation
+                      </h1>
+                      <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  "></div>
+                    </div>
+                    <iframe
+                      className="h-full w-full rounded-xl "
+                      src="https://www.youtube.com/embed/uq7n9-EQles"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
                   </div>
                 </div>
               </div>
