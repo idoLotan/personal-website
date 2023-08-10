@@ -278,14 +278,12 @@ function Home() {
                   </div>
                 </div>
 
-                <div className=" order-2 md:order-1 ">
-                  <div className="flex w-[100%]  md:h-[50rem] md:w-[100rem] flex-col md:flex-row items-center">
-                    <div className="">
-                      <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
-                        Hevanti presentation
-                      </h1>
-                      <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  "></div>
-                    </div>
+              
+              </div>
+              <div className="z-10 flex  flex-col items-center  justify-center">
+                <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
+                  <div className="w-full  order-1 md:order-2 h-96 2xl:h-[40rem]">
+                   
                     <iframe
                       className="h-full w-full rounded-xl "
                       src="https://www.youtube.com/embed/uq7n9-EQles"
@@ -295,8 +293,22 @@ function Home() {
                       allowfullscreen
                     ></iframe>
                   </div>
+
+                  <div className="order-2 m-10 w-[300px] md:order-1">
+                    <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
+                      Hevanti demo
+                    </h1>
+                    <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
+                      a presentation of my project
+                    </div>
+                  </div>
                 </div>
+
+              
               </div>
+
+
+            
             </div>
           </div>
         </div>
