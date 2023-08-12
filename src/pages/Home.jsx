@@ -256,9 +256,35 @@ function Home() {
                   </div>
                 </div>
               </div>
+              
               <div className="z-10 flex  flex-col items-center  justify-center">
                 <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
-                  <div className=" order-2 md:order-1">
+                  <div className="order-2  h-96 w-full md:order-1 2xl:h-[40rem]">
+                  
+
+                    <iframe
+                    className="h-full w-full rounded-xl "
+                      src="https://www.youtube.com/embed/E7eOW7fLb6s"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <div className="order-1 m-10 w-[300px] md:order-2">
+                    <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
+                    Advanaced Studies demo
+                    </h1>
+                    <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
+                      a presentation of my project
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="z-10 flex  flex-col items-center  justify-center">
+                <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
+                  <div className=" order-1 md:order-2">
                     <Link to="https://meveen.org ">
                       <img
                         src={hevanti}
@@ -268,7 +294,7 @@ function Home() {
                     </Link>
                   </div>
 
-                  <div className="order-1 m-10 w-[300px] md:order-2">
+                  <div className="order-2 m-10 w-[300px] md:order-1">
                     <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
                       Hevanti
                     </h1>
@@ -276,14 +302,12 @@ function Home() {
                       A site for a cleint how has a education buisness
                     </div>
                   </div>
+                  
                 </div>
-
-              
               </div>
               <div className="z-10 flex  flex-col items-center  justify-center">
                 <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
-                  <div className="w-full  order-1 md:order-2 h-96 2xl:h-[40rem]">
-                   
+                  <div className="order-2  h-96 w-full md:order-1 2xl:h-[40rem]">
                     <iframe
                       className="h-full w-full rounded-xl "
                       src="https://www.youtube.com/embed/uq7n9-EQles"
@@ -292,9 +316,19 @@ function Home() {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen
                     ></iframe>
+
+                    {/* <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/E7eOW7fLb6s"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe> */}
                   </div>
 
-                  <div className="order-2 m-10 w-[300px] md:order-1">
+                  <div className="order-1 m-10 w-[300px] md:order-2">
                     <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
                       Hevanti demo
                     </h1>
@@ -303,12 +337,8 @@ function Home() {
                     </div>
                   </div>
                 </div>
-
-              
               </div>
 
-
-            
             </div>
           </div>
         </div>
