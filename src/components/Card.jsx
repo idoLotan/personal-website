@@ -4,7 +4,7 @@ const Card = ({title, children}) => {
   return (
  
    
-    <div className="z-10 flex items-center">
+    <div className={`z-10 flex items-center `}>
       <div className="flex  flex-col  ">
     
         <div className="flex">

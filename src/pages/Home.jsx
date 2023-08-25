@@ -1,28 +1,24 @@
 import React from "react";
-import HeroPicture from "../assets/images/xcc-min.png";
-import js from "../assets/images/js.png";
-import react from "../assets/images/react.png";
-import git from "../assets/images/git.png";
-import ts from "../assets/images/ts.png";
-import tailwind from "../assets/images/tailwind.png";
-import firebase from "../assets/images/firebase.png";
 import coder from "../assets/images/coder.jpg";
-import nodejs from "../assets/images/nodejs.png";
-import python from "../assets/images/python.png";
-import mongo from "../assets/images/mongo.png";
-import aws from "../assets/images/aws.png";
 import logo from "../assets/images/logo.png";
-import matrix from "../assets/images/matrix.png";
-
-import cv from "../assets/idocv.pdf";
+import { useInView } from 'react-intersection-observer';
 import hevanti from "../assets/images/hevanti.jpg";
 import advancedStudies from "../assets/images/advansed-studies.png";
 import profilePic from "../assets/images/profilepic.png";
-import Card from "../components/Card";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import SkillsSection from "./SkillsSection";
+import AboutSection from "./AboutSection";
 
 function Home() {
+
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -115,7 +111,7 @@ function Home() {
                     </div>
                   </h1>
 
-                  <p className="mb-6 max-w-2xl  text-center font-light   text-gray-600 md:text-left md:text-lg lg:mb-8 lg:text-xl">
+                  <p className="mb-6 max-w-2xl  text-center font-light    text-gray-600 md:text-left md:text-lg lg:mb-8 lg:text-xl">
                     A Fullstack Developer fluent in React and Node.js, I enjoy
                     building dynamic and robust web applications that empower
                     users with intuitive interfaces and scalable functionality.
@@ -147,202 +143,125 @@ function Home() {
           <div className="w-1/2 max-md:w-full  "></div>
         </div>
       </section>
-      <section className="relative  z-10" id="about">
-        <div className="z-10 flex flex-col items-center justify-center bg-black p-10 ">
-          <img
-            src={profilePic}
-            alt=""
-            className="h-[300px] w-[300px] rounded-full  filter"
-          />
-          <div className="flex w-[60vw] justify-start">
-            <div className="max-w-2xl ">
-              <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-4xl text-[74px] font-bold leading-none tracking-tight  text-[#38A3A5] ">
-                About me
-              </h1>
-              <p class="font-roboto pt-12 text-start text-xl font-normal text-[#C7F9CC]">
-                Hello, my name is Ido Lotan and I am a passionate Full-Stack
-                developer based in Hafia, Israel. I enjoy building complex
-                applications with great UI and powerful backends. Programming
-                and development, become a passion of mine in recent years. once
-                i exposed to it i didn't stop codeing ever since
-              </p>
-
-              <p class="font-roboto pt-12 text-start text-xl font-normal text-[#C7F9CC]">
-                After I got my BSc in Environmental science, I started my first
-                job as technical system implementor in the water tech industry.
-                I learn how to code in collage, and I kept coding as a hobby.
-                after a while I decided to become a pro. then I joined the
-                Israel Tech Challenge bootcamp to upgrade my skills
-              </p>
-              <p class="font-roboto pt-12 text-start text-xl font-normal text-[#C7F9CC]">
-                i started to work as a freelancer on Fievrr in order to get a
-                Real experience in web development and working with clients.
-                thanks to Fievrr I got to work on a cool project with designers
-                and managers
-              </p>
-              <p class="font-roboto pt-12 text-start text-xl font-normal text-[#C7F9CC]">
-                I am seeking my first professional position as a Full-Stack
-                developer. My goals are to learn as much as possible, prove my
-                knowledge and skills, and make a significant impact on a
-                real-life products.
-              </p>
+   <AboutSection></AboutSection>
+     <SkillsSection></SkillsSection>
+     <section className="relative w-[100%]  bg-[#22577a]" id="projects" >
+      <div className="flex justify-center  ">
+        <div className="flex items-center">
+          <div className="flex  flex-col  ">
+            <div class="leading-14 p-3  text-3xl font-bold uppercase">
+              Projects
             </div>
-          </div>
-        </div>
-      </section>
-      <section
-        className="flex flex-col justify-start bg-[#22577a] p-10"
-        id="skills"
-      >
-        <div class=" flex  justify-center text-3xl font-bold uppercase">
-          Skills
-        </div>
-        <div className="relative flex w-[100%vw] justify-center  ">
-          <div className="absolute left-2 top-20 z-0">
-            <div className="ellipse  -rotate-45 transform"></div>
-          </div>
-
-          <div className="flex flex-col md:flex-row ">
-            <Card title={"Frontend"}>
-              <img src={js} className=" m-2 h-20" alt="" />
-              <img src={ts} className=" m-2 h-20" alt="" />
-              <img src={react} className="m-2 h-20 rounded-full" alt="" />
-              <img src={tailwind} className=" m-2 h-20" alt="" />
-            </Card>
-            <Card title={"Backend"}>
-              <img src={nodejs} className=" m-2 h-20" alt="" />
-              <img src={firebase} className="m-2 h-20" alt="" />
-              <img src={mongo} className="m-2 h-20" alt="" />
-              <img src={python} className="m-2 h-20" alt="" />
-            </Card>
-            <Card title={"ci/cd"}>
-              <img src={git} className=" m-2 h-12" alt="" />
-              <img src={aws} className=" m-2 h-20" alt="" />
-            </Card>
-          </div>
-        </div>
-      </section>
-      <section className="relative w-[100%]  bg-[#22577a]" id="projects">
-        <div className="flex justify-center  ">
-          <div className="flex items-center">
-            <div className="flex  flex-col  ">
-              <div class="leading-14 p-3  text-3xl font-bold uppercase">
-                Projects
-              </div>
-              <div className="absolute left-2 top-20 z-0">
-                <div className="ellipse  absolute z-0 rotate-45 transform"></div>
-                <div className="ellipse  -rotate-45 transform"></div>
-              </div>
-              <div className="z-10 flex  flex-col items-center justify-center ">
-                <div className="m-2 flex  w-[100vw] flex-col items-center justify-center rounded p-14  md:flex-row ">
-                  <div className="m-10 w-[300px]">
-                    <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
-                      Advanaced Studies
-                    </h1>
-                    <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
-                      A platform for science education making science fun to
-                      learn!
-                    </div>
-                  </div>
-
-                  <div className="group">
-                    <Link to="https://advanced-studies-client.vercel.app/">
-                      <img
-                        src={advancedStudies}
-                        alt=""
-                        className="cursor-pointer   rounded-xl md:min-w-[800px] "
-                      />
-                    </Link>
+            <div className="absolute left-2 top-20 z-0">
+              <div className="ellipse  absolute z-0 rotate-45 transform"></div>
+              <div className="ellipse  -rotate-45 transform"></div>
+            </div>
+            <div className="z-10 flex  flex-col items-center justify-center ">
+              <div className="m-2 flex  w-[100vw] flex-col items-center justify-center rounded p-14  md:flex-row ">
+                <div className="m-10 w-[300px]">
+                  <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
+                    Advanaced Studies
+                  </h1>
+                  <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
+                    A platform for science education making science fun to
+                    learn!
                   </div>
                 </div>
-              </div>
-              
-              <div className="z-10 flex  flex-col items-center  justify-center">
-                <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
-                  <div className="order-2  h-96 w-full md:order-1 2xl:h-[40rem]">
-                  
 
-                    <iframe
+                <div className="group">
+                  <Link to="https://advanced-studies-client.vercel.app/">
+                    <img
+                      src={advancedStudies}
+                      alt=""
+                      className="cursor-pointer     rounded-xl md:min-w-[800px] "
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="z-10 flex  flex-col items-center  justify-center">
+              <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
+                <div className="order-2  h-96 w-full md:order-1 2xl:h-[40rem]">
+                  <iframe
                     className="h-full w-full rounded-xl "
-                      src="https://www.youtube.com/embed/E7eOW7fLb6s"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
+                    src="https://www.youtube.com/embed/E7eOW7fLb6s"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
 
-                  <div className="order-1 m-10 w-[300px] md:order-2">
-                    <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
+                <div className="order-1 m-10 w-[300px] md:order-2">
+                  <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
                     Advanaced Studies demo
-                    </h1>
-                    <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
-                      a presentation of my project
-                    </div>
+                  </h1>
+                  <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
+                    a presentation of my project
                   </div>
                 </div>
               </div>
-              <div className="z-10 flex  flex-col items-center  justify-center">
-                <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
-                  <div className=" order-1 md:order-2">
-                    <Link to="https://meveen.org ">
-                      <img
-                        src={hevanti}
-                        alt=""
-                        className="   cursor-pointer rounded-xl "
-                      />
-                    </Link>
-                  </div>
-
-                  <div className="order-2 m-10 w-[300px] md:order-1">
-                    <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
-                      Hevanti
-                    </h1>
-                    <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
-                      A site for a cleint how has a education buisness
-                    </div>
-                  </div>
-                  
+            </div>
+            <div className="z-10 flex  flex-col items-center  justify-center">
+              <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
+                <div className=" order-1 md:order-2">
+                  <Link to="https://meveen.org ">
+                    <img
+                      src={hevanti}
+                      alt=""
+                      className="   cursor-pointer rounded-xl "
+                    />
+                  </Link>
                 </div>
-              </div>
-              <div className="z-10 flex  flex-col items-center  justify-center">
-                <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
-                  <div className="order-2  h-96 w-full md:order-1 2xl:h-[40rem]">
-                    <iframe
-                      className="h-full w-full rounded-xl "
-                      src="https://www.youtube.com/embed/uq7n9-EQles"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
 
-                    {/* <iframe
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/E7eOW7fLb6s"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe> */}
-                  </div>
-
-                  <div className="order-1 m-10 w-[300px] md:order-2">
-                    <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
-                      Hevanti demo
-                    </h1>
-                    <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
-                      a presentation of my project
-                    </div>
+                <div className="order-2 m-10 w-[300px] md:order-1">
+                  <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
+                    Hevanti
+                  </h1>
+                  <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
+                    A site for a cleint how has a education buisness
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="z-10 flex  flex-col items-center  justify-center">
+              <div className=" m-2 flex  w-[100vw] flex-col items-center  justify-center rounded p-14  md:flex-row ">
+                <div className="order-2  h-96 w-full md:order-1 2xl:h-[40rem]">
+                  <iframe
+                    className="h-full w-full rounded-xl "
+                    src="https://www.youtube.com/embed/uq7n9-EQles"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
 
+                  {/* <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/E7eOW7fLb6s"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe> */}
+                </div>
+
+                <div className="order-1 m-10 w-[300px] md:order-2">
+                  <h1 className="mb-4 flex max-w-2xl  flex-col text-left font-[Gloock] text-3xl text-[74px] font-bold leading-none tracking-tight  text-[#80ED99] ">
+                    Hevanti demo
+                  </h1>
+                  <div class="font-roboto  m-5 text-left text-xl font-bold text-[#80ED99]  ">
+                    a presentation of my project
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
       <section className="relative   w-[100%] bg-[#163c55] p-10" id="contact">
         <header className="p-4 text-2xl font-bold">contact me</header>
         <div className="flex  flex-wrap items-center justify-evenly gap-4 text-xl md:gap-0">
